@@ -1,0 +1,21 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.left-menu {
+
+    width: 300px;
+    height: 100%;
+    
+}
+
+.l-m-color{
+    background-color: rgb(172, 201, 255) !important;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px !important;
+    font-size: small;
+}
