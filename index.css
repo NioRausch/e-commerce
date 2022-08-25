@@ -29,7 +29,7 @@ ul {
 }
 
 .row {
-    padding-top: 60px !important;
+    padding-top: 30px !important;
 }
 
 .container2 {
@@ -42,4 +42,8 @@ ul {
 
 .user-log {
     padding-left: 15px;
+}
+
+.navbar {
+    background-color: yellowgreen !important;
 }

@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><i class="bi bi-bag-check-fill"></i>E-Commerce</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,7 @@
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         </div>
-        <div class="dropdown user-log">
+        <!--<div class="dropdown user-log">
             <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" width="32" height="32" class="rounded-circle me-2">
                 <strong>Usuario</strong>
@@ -53,7 +53,15 @@
             <ul class="dropdown-menu dropdown-menu-light text-small shadow" aria-labelledby="dropdownUser1">
                 <li><a class="dropdown-item" href="#">Logar</a></li>
             </ul>
-        </div>
+        </div>-->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Criar sua conta</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Entre</a>
+            </li>
+        </ul>
     </div>
     </nav>    
     <div class="container2">
@@ -141,7 +149,7 @@
                                 <span class="placeholder col-6"></span>
                                 <span class="placeholder col-8"></span>
                                 </p>
-                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                                
                             </div>
                         </div>
                     </div>
@@ -160,7 +168,7 @@
                                 <span class="placeholder col-6"></span>
                                 <span class="placeholder col-8"></span>
                                 </p>
-                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                                
                             </div>
                         </div>
                     </div>
@@ -179,66 +187,7 @@
                                 <span class="placeholder col-6"></span>
                                 <span class="placeholder col-8"></span>
                                 </p>
-                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="card" aria-hidden="true">
-                            <svg class="bd-placeholder-img card-img-top" width="80%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
-
-                            <div class="card-body">
-                                <div class="h5 card-title placeholder-glow">
-                                <span class="placeholder col-6"></span>
-                                </div>
-                                <p class="card-text placeholder-glow">
-                                <span class="placeholder col-7"></span>
-                                <span class="placeholder col-4"></span>
-                                <span class="placeholder col-4"></span>
-                                <span class="placeholder col-6"></span>
-                                <span class="placeholder col-8"></span>
-                                </p>
-                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" aria-hidden="true">
-                            <svg class="bd-placeholder-img card-img-top" width="80%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
-
-                            <div class="card-body">
-                                <div class="h5 card-title placeholder-glow">
-                                <span class="placeholder col-6"></span>
-                                </div>
-                                <p class="card-text placeholder-glow">
-                                <span class="placeholder col-7"></span>
-                                <span class="placeholder col-4"></span>
-                                <span class="placeholder col-4"></span>
-                                <span class="placeholder col-6"></span>
-                                <span class="placeholder col-8"></span>
-                                </p>
-                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" aria-hidden="true">
-                            <svg class="bd-placeholder-img card-img-top" width="80%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
-
-                            <div class="card-body">
-                                <div class="h5 card-title placeholder-glow">
-                                <span class="placeholder col-6"></span>
-                                </div>
-                                <p class="card-text placeholder-glow">
-                                <span class="placeholder col-7"></span>
-                                <span class="placeholder col-4"></span>
-                                <span class="placeholder col-4"></span>
-                                <span class="placeholder col-6"></span>
-                                <span class="placeholder col-8"></span>
-                                </p>
-                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                                
                             </div>
                         </div>
                     </div>
@@ -259,7 +208,7 @@
                                 <span class="placeholder col-6"></span>
                                 <span class="placeholder col-8"></span>
                                 </p>
-                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                                
                             </div>
                         </div>
                     </div>
@@ -278,7 +227,7 @@
                                 <span class="placeholder col-6"></span>
                                 <span class="placeholder col-8"></span>
                                 </p>
-                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                                
                             </div>
                         </div>
                     </div>
@@ -297,7 +246,66 @@
                                 <span class="placeholder col-6"></span>
                                 <span class="placeholder col-8"></span>
                                 </p>
-                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card" aria-hidden="true">
+                            <svg class="bd-placeholder-img card-img-top" width="80%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+
+                            <div class="card-body">
+                                <div class="h5 card-title placeholder-glow">
+                                <span class="placeholder col-6"></span>
+                                </div>
+                                <p class="card-text placeholder-glow">
+                                <span class="placeholder col-7"></span>
+                                <span class="placeholder col-4"></span>
+                                <span class="placeholder col-4"></span>
+                                <span class="placeholder col-6"></span>
+                                <span class="placeholder col-8"></span>
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" aria-hidden="true">
+                            <svg class="bd-placeholder-img card-img-top" width="80%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+
+                            <div class="card-body">
+                                <div class="h5 card-title placeholder-glow">
+                                <span class="placeholder col-6"></span>
+                                </div>
+                                <p class="card-text placeholder-glow">
+                                <span class="placeholder col-7"></span>
+                                <span class="placeholder col-4"></span>
+                                <span class="placeholder col-4"></span>
+                                <span class="placeholder col-6"></span>
+                                <span class="placeholder col-8"></span>
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" aria-hidden="true">
+                            <svg class="bd-placeholder-img card-img-top" width="80%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+
+                            <div class="card-body">
+                                <div class="h5 card-title placeholder-glow">
+                                <span class="placeholder col-6"></span>
+                                </div>
+                                <p class="card-text placeholder-glow">
+                                <span class="placeholder col-7"></span>
+                                <span class="placeholder col-4"></span>
+                                <span class="placeholder col-4"></span>
+                                <span class="placeholder col-6"></span>
+                                <span class="placeholder col-8"></span>
+                                </p>
+                                
                             </div>
                         </div>
                     </div>
