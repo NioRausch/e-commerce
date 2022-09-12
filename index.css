@@ -1,7 +1,7 @@
 html,
 body {
-  height: 100%;
   width: 100%;
+  letter-spacing: normal;
   overflow: hidden;
 }
 
@@ -9,7 +9,6 @@ body {
   float: left;
   width: 400px;
   min-width: 300px;
-  height: 100%;
 }
 
 .l-m-color {
@@ -21,36 +20,27 @@ ul {
   padding: 0px !important;
   font-size: small;
 }
-
-.main {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-
-.row {
-  padding-top: 30px !important;
-}
-
-.container2 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  padding: 0px !important;
-  margin: 0px !important;
-}
-
 .user-log {
   padding-left: 15px;
 }
 
 .navbar {
-  background-color: yellowgreen !important;
+  background-color: black !important;
 }
 
 .navbar-text {
   padding-top: 0rem !important;
   padding-bottom: 0rem !important;
+}
+
+.absolute {
+  width: 100%;
+  position: absolute !important;
+}
+
+.pageLogin {
+  display: flex;
+  height: 100%;
 }
 
 .page {
@@ -65,12 +55,51 @@ ul {
 
 .produtos {
   min-width: 800px;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.row {
+  margin-left: 0 !important;
+  flex-wrap: nowrap !important;
 }
 
 .produto {
   height: 200px;
-  width: 80%;
   background-color: white;
+}
+
+.tituloProduto {
+  margin-top: 15px !important;
+  font-size: larger !important;
+  color: black;
+  width: 400px !important;
+  height: 30px !important;
+}
+
+.descricaoProduto {
+  display: flex;
+  flex-direction: column;
+}
+
+.precoProduto {
+  font-weight: 900;
+  font-size: x-large;
+  color: black;
+  margin-top: 10px;
+}
+
+.ratings {
+  margin-right: 10px;
+}
+
+.ratings i {
+  color: #cecece;
+  font-size: 32px;
+}
+
+.rating-color {
+  color: #fbc634 !important;
 }
 
 .produto-imagem {
@@ -81,4 +110,23 @@ ul {
 
 .bg-light {
   background-color: gainsboro !important;
+}
+
+.center {
+  margin: auto;
+  width: 500px;
+  padding: 30px;
+  background-color: ghostwhite;
+}
+
+#loginBtn {
+  margin: auto;
+}
+
+.loginFooter {
+  background-color: gainsboro;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+  padding: 15px;
+  text-align: center;
 }
