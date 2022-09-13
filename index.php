@@ -1,3 +1,6 @@
+<?php
+include "lib/conexao.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +26,13 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+        <!-- Jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+        <!-- Animated alerts -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     </head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -30,14 +40,14 @@
     <body class="bg-light">
         <?php if (isset($_GET["page"])) {
           if ($_GET["page"] == "login") {
-            include "login.php";
+            include "pages/login.php";
           } elseif ($_GET["page"] == "register") {
-            include "register.php";
+            include "pages/register.php";
           } else {
-            include "home.php";
+            include "pages/home.php";
           }
         } else {
-          include "home.php";
+          include "pages/home.php";
         } ?>
 
         <script>

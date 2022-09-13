@@ -1,0 +1,79 @@
+<?php
+
+if (
+  isset($_POST["registrar"]) &&
+  isset($_POST["email"]) &&
+  isset($_POST["nome"]) &&
+  isset($_POST["senha"])
+) {
+  echo "Teste";
+  $sql = "INSERT into usuarios(nome, email,senha)
+                    VALUES (:nome, :email, :senha)";
+
+  $consulta = $conn->prepare($sql);
+  if (
+    $consulta->execute([
+      "nome" => $_POST["nome"],
+      "email" => $_POST["email"],
+      "senha" => $_POST["senha"],
+    ])
+  ) {
+    echo "DONE_SQL";
+  }
+} ?>
+
+<nav class="navbar navbar-expand-lg navbar-dark absolute">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="bi bi-bag-check-fill"></i>E-Commerce</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="?">Home</a>
+                </li>
+            </ul>
+
+        </div>
+</nav>
+
+<div class="pageLogin">
+    <div data-aos="fade-up" class="shadow-lg center border rounded-lg">
+        <form id="formularioRegister" class="d-flex flex-column 3">
+            <div class="form-group">
+                <label for="nome">Nome de usuario</label>
+                <input type="text" class="form-control" id="nome" placeholder="Insira seu nome de usuario" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Endereço de Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                    placeholder="Insira seu email" required>
+                <div class="invalid-feedback">
+                    Insira um email valido.
+                </div>
+                <small id="emailHelp" class="form-text text-muted">Não compartilharemos o seu email com ninguem.</small>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" id="senha" placeholder="Insira senha" required>
+            </div>
+            <div class="form-group">
+                <label for="senha2">Confirme sua senha</label>
+                <input type="password" class="form-control" id="senha2" placeholder="Insira senha" required>
+            </div>
+            <br>
+            <button id="loginBtn" type="submit" class="btn btn-primary">Registrar</button>
+            <hr>
+            <div id="ErroSenha" class="alert alert-danger" role="alert">
+                As senhas nâo se coincidem.
+            </div>
+            <div class="loginFooter">Já possui conta? <a class="text-primary" href="?page=login">Loga-se</a>.
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="scripts/register.js"></script>

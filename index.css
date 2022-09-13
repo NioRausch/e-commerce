@@ -3,6 +3,7 @@ body {
   width: 100%;
   letter-spacing: normal;
   overflow: hidden;
+  height: 100vh;
 }
 
 .left-menu {
