@@ -1,6 +1,3 @@
-<?php
-include "lib/conexao.php"; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,17 +35,40 @@ include "lib/conexao.php"; ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <body class="bg-light">
-        <?php if (isset($_GET["page"])) {
-          if ($_GET["page"] == "login") {
-            include "pages/login.php";
-          } elseif ($_GET["page"] == "register") {
-            include "pages/register.php";
+        <?php
+        session_start();
+
+        $no_login_allowed = ["login", "register"];
+
+        $is_logged = false;
+
+        if (isset($_SESSION["token"])) {
+          $is_logged = true;
+        }
+
+        function go_home($is_logged)
+        {
+          if (!$is_logged) {
+            include "pages/home.html";
           } else {
-            include "pages/home.php";
+            include "pages/homeLogged.html";
+          }
+        }
+
+        if (isset($_GET["page"])) {
+          if ($is_logged && in_array($_GET["page"], $no_login_allowed)) {
+            header("location: ?page=home");
+          } elseif ($_GET["page"] == "login") {
+            include "pages/login.html";
+          } elseif ($_GET["page"] == "register") {
+            include "pages/register.html";
+          } else {
+            go_home($is_logged);
           }
         } else {
-          include "pages/home.php";
-        } ?>
+          go_home($is_logged);
+        }
+        ?>
 
         <script>
         AOS.init();

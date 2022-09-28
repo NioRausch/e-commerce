@@ -131,3 +131,7 @@ ul {
   padding: 15px;
   text-align: center;
 }
+
+:root {
+  --bs-primary: #0d6efd !important;
+}

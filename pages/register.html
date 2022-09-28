@@ -1,27 +1,3 @@
-<?php
-
-if (
-  isset($_POST["registrar"]) &&
-  isset($_POST["email"]) &&
-  isset($_POST["nome"]) &&
-  isset($_POST["senha"])
-) {
-  echo "Teste";
-  $sql = "INSERT into usuarios(nome, email,senha)
-                    VALUES (:nome, :email, :senha)";
-
-  $consulta = $conn->prepare($sql);
-  if (
-    $consulta->execute([
-      "nome" => $_POST["nome"],
-      "email" => $_POST["email"],
-      "senha" => $_POST["senha"],
-    ])
-  ) {
-    echo "DONE_SQL";
-  }
-} ?>
-
 <nav class="navbar navbar-expand-lg navbar-dark absolute">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><i class="bi bi-bag-check-fill"></i>E-Commerce</a>
@@ -76,4 +52,4 @@ if (
     </div>
 </div>
 
-<script src="scripts/register.js"></script>
+<script src="scripts/js/register.js"></script>
