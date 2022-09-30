@@ -55,6 +55,13 @@
           }
         }
 
+        function logout()
+        {
+          unset($_SESSION["token"]);
+          unset($_SESSION["nome"]);
+          header("Location: ?page=home");
+        }
+
         if (isset($_GET["page"])) {
           if ($is_logged && in_array($_GET["page"], $no_login_allowed)) {
             header("location: ?page=home");
@@ -62,6 +69,8 @@
             include "pages/login.html";
           } elseif ($_GET["page"] == "register") {
             include "pages/register.html";
+          } elseif ($_GET["page"] == "logout") {
+            logout();
           } else {
             go_home($is_logged);
           }
