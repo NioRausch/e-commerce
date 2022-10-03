@@ -65,11 +65,15 @@
         if (isset($_GET["page"])) {
           if ($is_logged && in_array($_GET["page"], $no_login_allowed)) {
             header("location: ?page=home");
-          } elseif ($_GET["page"] == "login") {
+          }
+
+          if ($_GET["page"] == "cart" && $is_logged) {
+            include "pages/cart.html";
+          } elseif ($_GET["page"] == "login" && !$is_logged) {
             include "pages/login.html";
-          } elseif ($_GET["page"] == "register") {
+          } elseif ($_GET["page"] == "register" && !$is_logged) {
             include "pages/register.html";
-          } elseif ($_GET["page"] == "logout") {
+          } elseif ($_GET["page"] == "logout" && $is_logged) {
             logout();
           } else {
             go_home($is_logged);

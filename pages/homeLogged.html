@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"
+    <a class="navbar-brand" href="?page=home"
       ><i class="bi bi-bag-check-fill"></i>E-Commerce</a
     >
     <button
@@ -17,36 +17,33 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="?page=home"
+            >Home</a
+          >
         </li>
       </ul>
     </div>
-
+    <a
+      style="color: white; font-size: xx-large; margin-right: 15px"
+      class="bi bi-cart-fill iconanim"
+      href="?page=cart"
+    ></a>
     <div class="dropdown text-end">
       <a
         href="#"
-        class="d-block link-dark text-decoration-none dropdown-toggle show"
+        class="d-block link-dark text-decoration-none dropdown-toggle"
         data-bs-toggle="dropdown"
-        aria-expanded="true"
+        aria-expanded="false"
       >
         <img
           src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png"
           alt="mdo"
           width="48"
           height="48"
-          class="rounded-circle"
+          class="rounded-circle iconanim"
         />
       </a>
-      <ul
-        class="dropdown-menu text-small show"
-        style="
-          position: absolute;
-          inset: 0px auto auto 0px;
-          margin: 0px;
-          transform: translate(0px, 48px);
-        "
-        data-popper-placement="bottom-start"
-      >
+      <ul class="dropdown-menu text-small" style="">
         <li><a class="dropdown-item" href="#">New project...</a></li>
         <li><a class="dropdown-item" href="#">Settings</a></li>
         <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -54,8 +51,15 @@
         <li><a class="dropdown-item" href="?page=logout">Sign out</a></li>
       </ul>
     </div>
+
     <span style="color: white; font-size: medium"
-      ><b> &nbsp;Bem vindo Nicolas! &nbsp;</b>
+      ><b>
+        &nbsp;Bem vindo
+        <script>
+          document.write(sessionStorage.nome);
+        </script>
+        ! &nbsp;</b
+      >
     </span>
   </div>
 </nav>
@@ -110,7 +114,13 @@
                     <li>
                       <a href="#" class="nav-link text-dark">
                         <i class="bi bi-tv" width="16" height="16"></i>
-                        Tv e vídeos
+                        Tvs
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-dark">
+                        <i class="bi bi-tv" width="16" height="16"></i>
+                        Computadores e Notebooks
                       </a>
                     </li>
                   </ul>
@@ -163,60 +173,7 @@
 
     <!-- Exibição de produtos--->
     <div class="produtos">
-      <div data-aos="fade-left" class="shadow-sm border row produto">
-        <img class="produto-imagem" src="res/teste.jpg" />
-        <div class="descricao"></div>
-      </div>
-      <div data-aos="fade-left" class="shadow-sm border row produto">
-        <img class="produto-imagem" src="res/moto.jpg" />
-        <div class="descricao"></div>
-      </div>
-      <div data-aos="fade-left" class="shadow-sm border row produto">
-        <img class="produto-imagem" src="res/celular2.png" />
-        <div class="descricao"></div>
-      </div>
-      <div data-aos="fade-left" class="shadow-sm border row produto">
-        <img class="produto-imagem" src="res/notebook.png" />
-        <div class="descricaoProduto">
-          <span class="tituloProduto"> Notebook Lenovo V14 (14" Intel) </span>
-          <span class="precoProduto"> R$ 2.779 </span>
-          <div class="ratings">
-            <i class="fa fa-star rating-color"></i>
-            <i class="fa fa-star rating-color"></i>
-            <i class="fa fa-star rating-color"></i>
-            <i class="fa fa-star rating-color"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-      </div>
-      <div data-aos="fade-left" class="shadow-sm border row produto">
-        <img class="produto-imagem" src="res/notebook.png" />
-        <div class="descricaoProduto">
-          <span class="tituloProduto"> Notebook Lenovo V14 (14" Intel) </span>
-          <span class="precoProduto"> R$ 2.779 </span>
-          <div class="ratings">
-            <i class="fa fa-star rating-color"></i>
-            <i class="fa fa-star rating-color"></i>
-            <i class="fa fa-star rating-color"></i>
-            <i class="fa fa-star rating-color"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-      </div>
-      <div data-aos="fade-left" class="shadow-sm border row produto">
-        <img class="produto-imagem" src="res/notebook.png" />
-        <div class="descricaoProduto">
-          <span class="tituloProduto"> Notebook Lenovo V14 (14" Intel) </span>
-          <span class="precoProduto"> R$ 2.779 </span>
-          <div class="ratings">
-            <i class="fa fa-star rating-color"></i>
-            <i class="fa fa-star rating-color"></i>
-            <i class="fa fa-star rating-color"></i>
-            <i class="fa fa-star rating-color"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-      </div>
+      <script src="scripts/js/produtos.js"></script>
     </div>
   </div>
 </div>

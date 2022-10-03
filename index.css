@@ -57,7 +57,13 @@ ul {
 .produtos {
   min-width: 800px;
   height: 100vh;
-  overflow: scroll;
+  overflow: auto;
+}
+
+.produtos-cart {
+  min-width: 600px;
+  height: 100vh;
+  overflow: auto;
 }
 
 .row {
@@ -67,6 +73,11 @@ ul {
 
 .produto {
   height: 200px;
+  background-color: white;
+}
+
+.produto-cart {
+  height: 100px;
   background-color: white;
 }
 
@@ -87,7 +98,7 @@ ul {
   font-weight: 900;
   font-size: x-large;
   color: black;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .ratings {
@@ -107,6 +118,12 @@ ul {
   object-fit: contain;
   height: 180px;
   width: 180px !important;
+}
+
+.produto-imagem-cart {
+  object-fit: contain;
+  height: 100px;
+  width: 100px !important;
 }
 
 .bg-light {
@@ -134,4 +151,25 @@ ul {
 
 :root {
   --bs-primary: #0d6efd !important;
+}
+
+.iconanim {
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.iconanim:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.cart {
+  padding: 15px;
+}
+
+.cart-price {
+  height: 30vh;
+  padding: 15px;
+  min-width: 300px;
+  margin-left: 15px;
 }

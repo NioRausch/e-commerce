@@ -47,6 +47,9 @@ async function submit(event, form) {
             "Agora você podera se logar.",
             "success"
           );
+          setTimeout(function(){
+            
+          }, 5000);
         else if (data == "ERRO: 23000")
           Swal.fire({
             icon: "error",
