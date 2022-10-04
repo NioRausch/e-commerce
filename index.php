@@ -34,7 +34,7 @@
     </head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-    <body class="bg-light">
+    <body class="">
         <?php
         session_start();
 
@@ -73,6 +73,8 @@
             include "pages/login.html";
           } elseif ($_GET["page"] == "register" && !$is_logged) {
             include "pages/register.html";
+          } elseif ($_GET["page"] == "produto") {
+            include "pages/produto.html";
           } elseif ($_GET["page"] == "logout" && $is_logged) {
             logout();
           } else {
@@ -91,3 +93,4 @@
 
 
 </html>
+

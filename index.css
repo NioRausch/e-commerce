@@ -1,3 +1,10 @@
+a.fill-div {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+
 html,
 body {
   width: 100%;
@@ -55,15 +62,16 @@ ul {
 }
 
 .produtos {
-  min-width: 800px;
+  width: 800px;
   height: 100vh;
   overflow: auto;
+  padding-bottom: 50px;
 }
 
 .produtos-cart {
-  min-width: 600px;
+  width: 700px;
   height: 100vh;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .row {
@@ -74,7 +82,14 @@ ul {
 .produto {
   height: 200px;
   background-color: white;
+  transition: 0.3s;
 }
+
+.produto:hover {
+  background-color: ghostwhite;
+  transform: scale(1.01);
+}
+
 
 .produto-cart {
   height: 100px;
@@ -172,4 +187,10 @@ ul {
   padding: 15px;
   min-width: 300px;
   margin-left: 15px;
+}
+
+.image-produto {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
 }

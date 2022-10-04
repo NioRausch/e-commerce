@@ -41,15 +41,16 @@ async function submit(event, form) {
         token: await sha256(senha),
       },
       function (data) {
-        if (data == "DONE_SQL")
+        if (data == "DONE_SQL"){
           Swal.fire(
             "Registrado com sucesso",
-            "Agora você podera se logar.",
+            "Redirecionando ao login...",
             "success"
           );
           setTimeout(function(){
-            
-          }, 5000);
+            location.href = "?page=login";
+          }, 2000);
+        }
         else if (data == "ERRO: 23000")
           Swal.fire({
             icon: "error",
