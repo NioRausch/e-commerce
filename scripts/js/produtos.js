@@ -24,11 +24,13 @@ function generateStars(value) {
   return html;
 }
 
-function showProduto(produto){
+function showProduto(produto) {
   $(".produtos").html(`
 
     <div style="display:flex;">
-      <img src="${produto["img_caminho"]}" class="image-produto" alt="Responsive image">
+      <img src="${
+        produto["img_caminho"]
+      }" class="image-produto" alt="Responsive image">
       <div class="descricaoProduto" style="margin-left:15px">
         <h3 class="tituloProduto"> ${produto["nome"]} </h3>
         <h1 class="precoProduto"> R$ <b style="color:green !important; font-size:xx-large;">${numberWithCommas(
@@ -47,47 +49,47 @@ function showProduto(produto){
     <p style="padding:15px;">${produto["descricao"]}</p>
   `);
 
-  $("#addCart").click(function(){
+  $("#addCart").click(function () {
     $.post(
       "./scripts/php/addCart.php",
-    {
-      addCart: true,
-      idProduto: produto["id"]
-    },
-    function (data) {
-      console.log(produto["id"])
-      Swal.fire(
-        "Produto adicionado com sucesso!",
-        "Redirecionando ao carrinho...",
-        "success"
-      );
-      setTimeout(function(){
-        location.href = "?page=cart";
-      }, 600);
-    }
-    )
+      {
+        addCart: true,
+        idProduto: produto["id"],
+      },
+      function (data) {
+        console.log(produto["id"]);
+        Swal.fire(
+          "Produto adicionado com sucesso!",
+          "Redirecionando ao carrinho...",
+          "success"
+        );
+        setTimeout(function () {
+          location.href = "?page=cart";
+        }, 600);
+      }
+    );
   });
-  
 }
 
-function updateProdutos(idCategoria){
-
+function updateProdutos(idCategoria) {
   $.post(
     "./scripts/php/produtos.php",
     {
       produtos: true,
-      idCategoria: idCategoria
+      idCategoria: idCategoria,
     },
     function (data) {
       var data = JSON.parse(data);
-      
+
       $(".produtos").html("");
 
       data.forEach((produto) => {
         produto["preco"] = parseFloat(produto["preco"]);
         $(".produtos").append(
           `
-         <div style="cursor: pointer;" class="shadow-sm border row produto">
+         <div id="produto${
+           produto["id"]
+         }" style="cursor: pointer;" class="shadow-sm border row produto">
           <img class="produto-imagem" src="${produto["img_caminho"]}" />
           <div class="descricaoProduto">
             <span class="tituloProduto"> ${produto["nome"]} </span>
@@ -100,8 +102,9 @@ function updateProdutos(idCategoria){
           </div>
         </div>
           `
-        ).click(function () {
-          showProduto(produto)
+        );
+        $("#produto" + produto["id"]).click(function () {
+          showProduto(produto);
         });
       });
     }
@@ -110,15 +113,15 @@ function updateProdutos(idCategoria){
 
 $("#catCel").click(function () {
   updateProdutos("1");
-})
+});
 $("#catTvs").click(function () {
   updateProdutos("3");
-})
+});
 $("#catComp").click(function () {
   updateProdutos("2");
-})
+});
 $("#catEletro").click(function () {
   updateProdutos("4");
-})
+});
 
-
+updateProdutos("1");
